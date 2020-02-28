@@ -1,0 +1,9 @@
+C:\Users\Jhonatan\Documents\GitHub\sistemas-distribuidos\Pong\Pong\bin\Debug\Pong.exe.config
+C:\Users\Jhonatan\Documents\GitHub\sistemas-distribuidos\Pong\Pong\bin\Debug\Pong.exe
+C:\Users\Jhonatan\Documents\GitHub\sistemas-distribuidos\Pong\Pong\bin\Debug\Pong.pdb
+C:\Users\Jhonatan\Documents\GitHub\sistemas-distribuidos\Pong\Pong\obj\Debug\Pong.csprojAssemblyReference.cache
+C:\Users\Jhonatan\Documents\GitHub\sistemas-distribuidos\Pong\Pong\obj\Debug\Pong.Form1.resources
+C:\Users\Jhonatan\Documents\GitHub\sistemas-distribuidos\Pong\Pong\obj\Debug\Pong.Properties.Resources.resources
+C:\Users\Jhonatan\Documents\GitHub\sistemas-distribuidos\Pong\Pong\obj\Debug\Pong.csproj.GenerateResource.cache
+C:\Users\Jhonatan\Documents\GitHub\sistemas-distribuidos\Pong\Pong\obj\Debug\Pong.exe
+C:\Users\Jhonatan\Documents\GitHub\sistemas-distribuidos\Pong\Pong\obj\Debug\Pong.pdb
