@@ -6,8 +6,9 @@
 import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.Rectangle;
+import java.awt.Toolkit;
 import java.util.Random;
-import static sun.applet.AppletResourceLoader.getImage;
+
 
 public class Bola implements Runnable {
     //Variáveis globais
@@ -55,8 +56,9 @@ public class Bola implements Runnable {
     
     //Desenhando
     public void draw(Graphics g){
+        Toolkit tk = Toolkit.getDefaultToolkit();
         java.net.URL urlBola = getClass().getResource(("img/bola.png")); //Busca a imagem da bola na pasta IMG
-        imagemBola = getImage(urlBola);
+        imagemBola = tk.getImage(urlBola);
         g.drawImage(imagemBola, this.bola.x, this.bola.y, null);
     }
     

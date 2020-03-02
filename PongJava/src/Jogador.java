@@ -5,8 +5,8 @@
 import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.Rectangle;
+import java.awt.Toolkit;
 import java.awt.event.KeyEvent;
-import static sun.applet.AppletResourceLoader.getImage;
 
 public class Jogador implements Runnable {
     //Variáveis globais
@@ -93,10 +93,11 @@ public class Jogador implements Runnable {
     
     //Desenha o jogador na tela
     public void draw(Graphics g){
+        Toolkit tk = Toolkit.getDefaultToolkit();
         java.net.URL player1 = getClass().getResource("img/brasil.png");//Pega a imagem
-        ImagemJogador1 = getImage(player1);
+        ImagemJogador1 = tk.getImage(player1);
         java.net.URL player2 = getClass().getResource("img/argentina.png");
-        ImagemJogador2 = getImage(player2);
+        ImagemJogador2 = tk.getImage(player2);
         
         switch(id){
             //Para o jogador 1

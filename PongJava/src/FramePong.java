@@ -8,12 +8,12 @@ import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Image;
+import java.awt.Toolkit;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.UIManager;
-import static sun.applet.AppletResourceLoader.getImage;
 
 public class FramePong extends JFrame{
     Image imagem;
@@ -55,8 +55,9 @@ public class FramePong extends JFrame{
     }
     //Método Draw
     public void draw(Graphics g){
+        Toolkit tk = Toolkit.getDefaultToolkit();
         java.net.URL urlBackground = getClass().getResource("img/background.png");
-        BackgroundImage = getImage(urlBackground);
+        BackgroundImage = tk.getImage(urlBackground);
         g.drawImage(BackgroundImage, 0, 0,null);
         b.draw(g); //Desenha a bola
         b.jogador1.draw(g);//Desenha o jogador 1
