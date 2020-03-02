@@ -3,6 +3,7 @@
  * @author Jhonatan
  */
 
+import com.sun.javafx.image.impl.IntArgb;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
@@ -46,6 +47,7 @@ public class FramePong extends JFrame{
     }
     
     //Método PAINT utilizando a biblioteca Graphics
+    @Override
     public void paint(Graphics g)
     {
         imagem = createImage(getWidth(), getHeight()); //Captura o tamanho do frame
@@ -58,14 +60,15 @@ public class FramePong extends JFrame{
         Toolkit tk = Toolkit.getDefaultToolkit();
         java.net.URL urlBackground = getClass().getResource("img/background.png");
         BackgroundImage = tk.getImage(urlBackground);
-        g.drawImage(BackgroundImage, 0, 0,null);
+        g.drawImage(BackgroundImage, 0, 10,null);
         b.draw(g); //Desenha a bola
         b.jogador1.draw(g);//Desenha o jogador 1
         b.jogador2.draw(g);//Desenha o jogador 2
         g.setFont(new Font("Arial", Font.BOLD, 36));
         g.setColor(Color.WHITE);
-        g.drawString(nomeJogador1+" : "+b.placarJogador1, 340 - g.getFontMetrics().stringWidth(nomeJogador1), 70);
-        g.drawString(b.placarJogador2+" : "+nomeJogador2, 405, 70);
+        g.drawString(nomeJogador1+" : "+b.placarJogador1, 350 - (g.getFontMetrics().stringWidth(nomeJogador1)+g.getFontMetrics().stringWidth(String.valueOf(b.placarJogador1))), 70);
+        g.drawString("X", 389, 70);
+        g.drawString(b.placarJogador2+" : "+nomeJogador2, 420, 70);
         repaint(); //"Pinta" novamente com o método Draw;
     }
     
