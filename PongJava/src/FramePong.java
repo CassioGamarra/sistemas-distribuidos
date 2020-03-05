@@ -2,8 +2,6 @@
  * Frame criado utilizando a biblioteca Java AWT
  * @author Jhonatan
  */
-
-import com.sun.javafx.image.impl.IntArgb;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
@@ -67,7 +65,6 @@ public class FramePong extends JFrame{
         g.setFont(new Font("Arial", Font.BOLD, 36));
         g.setColor(Color.WHITE);
         g.drawString(nomeJogador1+" : "+b.placarJogador1, 350 - (g.getFontMetrics().stringWidth(nomeJogador1)+g.getFontMetrics().stringWidth(String.valueOf(b.placarJogador1))), 70);
-        g.drawString("X", 389, 70);
         g.drawString(b.placarJogador2+" : "+nomeJogador2, 420, 70);
         repaint(); //"Pinta" novamente com o método Draw;
     }

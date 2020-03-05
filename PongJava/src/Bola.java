@@ -20,6 +20,9 @@ public class Bola implements Runnable {
     //Placar
     int placarJogador1, placarJogador2;
     
+    //SOM
+    TocarSom somJogador1 = new TocarSom("audio/jogador1.wav");
+    TocarSom somJogador2 = new TocarSom("audio/jogador1.wav");
     //Imagem da bola
     Image imagemBola;
     
@@ -66,10 +69,12 @@ public class Bola implements Runnable {
     public void colisao(){
         //Para a colisão com o Jogador 1
         if(bola.intersects(jogador1.jogador)){
+            somJogador1.tocarSom();
             setDirecaoX(+1);
         }
         //Para colisão com o Jogador 2
         if(bola.intersects(jogador2.jogador)){
+            somJogador2.tocarSom();
             setDirecaoX(-1);
         }
     }

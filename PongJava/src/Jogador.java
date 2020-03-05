@@ -94,11 +94,11 @@ public class Jogador implements Runnable {
     //Desenha o jogador na tela
     public void draw(Graphics g){
         Toolkit tk = Toolkit.getDefaultToolkit();
-        java.net.URL player1 = getClass().getResource("img/brasil.png");//Pega a imagem
+        java.net.URL player1 = getClass().getResource("img/jogador.png");//Pega a imagem
         ImagemJogador1 = tk.getImage(player1);
-        java.net.URL player2 = getClass().getResource("img/argentina.png");
+        java.net.URL player2 = getClass().getResource("img/jogador.png");
         ImagemJogador2 = tk.getImage(player2);
-        
+      
         switch(id){
             //Para o jogador 1
             case 1:
