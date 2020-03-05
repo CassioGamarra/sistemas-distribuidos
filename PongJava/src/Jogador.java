@@ -80,6 +80,10 @@ public class Jogador implements Runnable {
         direcaoY = dirY;
     }
     
+    public int getDirecaoY(){
+        return jogador.y;
+    }
+    
     //Movimento
     public void mover(){
         jogador.y += direcaoY;

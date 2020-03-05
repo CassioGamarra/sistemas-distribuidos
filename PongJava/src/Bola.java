@@ -15,7 +15,7 @@ public class Bola implements Runnable {
     int x, y, direcaoX, direcaoY;
     Rectangle bola;
     //Classe Jogador
-    Jogador jogador1 = new Jogador(15,210,1); 
+    Jogador jogador1 = new Jogador(10,210,1); 
     Jogador jogador2 = new Jogador(770,210,2);
     //Placar
     int placarJogador1, placarJogador2;
@@ -87,12 +87,16 @@ public class Bola implements Runnable {
         
         //Realiza o movimento da bola
         if(bola.x <= 0){
-            setDirecaoX(+1);
+            bola.x = jogador1.x+20;
+            bola.y = jogador1.getDirecaoY()+40;//jogador1.y+40;
             placarJogador2++;
+            setDirecaoX(+1);
         }
         if(bola.x>=785){
-            setDirecaoX(-1);
+            bola.x = jogador2.x-20;
+            bola.y = jogador2.getDirecaoY()+40;//jogador2.y+40;
             placarJogador1++;
+            setDirecaoX(-1);
         }
         if(bola.y <= 0){
             setDirecaoY(+1);

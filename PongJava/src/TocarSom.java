@@ -17,13 +17,14 @@ public class TocarSom {
             AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(urlAudio);
             clip = AudioSystem.getClip();
             clip.open(audioInputStream);
+            clip.start();
+            clip.loop(0);
         }
         catch (Exception ex) {
             System.out.println("Erro ao executar SOM!");
             ex.printStackTrace();
         }
-        clip.start();
-        clip.loop(0);
+        
     }
     public void pararSom(){
         clip.stop();
