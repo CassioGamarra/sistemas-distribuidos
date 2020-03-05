@@ -9,6 +9,9 @@ public class TocarSom {
     Clip clip;
     public TocarSom(String caminho){
         this.nome = caminho;
+    }
+    
+    public void tocarSom() {
         java.net.URL urlAudio = getClass().getResource((nome));
         try{
             AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(urlAudio);
@@ -19,9 +22,6 @@ public class TocarSom {
             System.out.println("Erro ao executar SOM!");
             ex.printStackTrace();
         }
-    }
-    
-    public void tocarSom() {
         clip.start();
         clip.loop(0);
     }
