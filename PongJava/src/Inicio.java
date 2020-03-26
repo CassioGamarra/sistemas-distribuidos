@@ -40,9 +40,7 @@ public class Inicio extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("PONG - JOGAR");
         setBackground(new java.awt.Color(255, 255, 255));
-        setMaximumSize(new java.awt.Dimension(450, 330));
         setMinimumSize(new java.awt.Dimension(450, 330));
-        setPreferredSize(new java.awt.Dimension(450, 330));
         setResizable(false);
 
         panelInicio.setMaximumSize(new java.awt.Dimension(430, 300));

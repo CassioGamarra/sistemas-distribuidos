@@ -656,7 +656,7 @@ public class CalculadoraFrame extends javax.swing.JFrame {
     }
     private void dividir(){
         lblResultado.setText(numero+"/");
-        numero = "0";
+        numero = "";
         fieldNumeros.setText(numero);
     }
     private void igual(){
